@@ -29,3 +29,8 @@ services:
       - 3306
 volumes:
   db-data:
+steps:
+  - name: ZAP Scan
+    uses: zaproxy/action-baseline@v0.7.0
+    with:
+      target: 'http://localhost:4000'
